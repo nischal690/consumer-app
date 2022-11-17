@@ -307,8 +307,11 @@ class _EdityourprofileWidgetState extends State<EdityourprofileWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Image.network(
-                                functions
-                                    .countryflag(textFieldSelectedOption3)!,
+                                valueOrDefault<String>(
+                                  functions
+                                      .countryflag(textFieldSelectedOption3),
+                                  'https://flagcdn.com/h80/us.png',
+                                ),
                                 width: 24,
                                 height: 24,
                                 fit: BoxFit.cover,

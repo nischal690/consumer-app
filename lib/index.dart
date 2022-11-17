@@ -7,8 +7,8 @@ export 'forgot_password/forgot_password_widget.dart' show ForgotPasswordWidget;
 export 'forgot_password2/forgot_password2_widget.dart'
     show ForgotPassword2Widget;
 export 'profile/profile_widget.dart' show ProfileWidget;
-export 'edityourprofile/edityourprofile_widget.dart' show EdityourprofileWidget;
 export 'setting/setting_widget.dart' show SettingWidget;
+export 'edityourprofile/edityourprofile_widget.dart' show EdityourprofileWidget;
 export 'language/language_widget.dart' show LanguageWidget;
 export 'camera/camera_widget.dart' show CameraWidget;
 export 'home/home_widget.dart' show HomeWidget;

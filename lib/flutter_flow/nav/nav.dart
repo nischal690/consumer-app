@@ -96,14 +96,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : ProfileWidget(),
             ),
             FFRoute(
-              name: 'edityourprofile',
-              path: 'edityourprofile',
-              builder: (context, params) => EdityourprofileWidget(),
-            ),
-            FFRoute(
               name: 'setting',
               path: 'setting',
               builder: (context, params) => SettingWidget(),
+            ),
+            FFRoute(
+              name: 'edityourprofile',
+              path: 'edityourprofile',
+              builder: (context, params) => EdityourprofileWidget(),
             ),
             FFRoute(
               name: 'Language',

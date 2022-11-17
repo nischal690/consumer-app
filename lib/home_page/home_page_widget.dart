@@ -82,21 +82,26 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0, 40, 32, 0),
-                                  child: SelectionArea(
-                                      child: AutoSizeText(
-                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa',
-                                    textAlign: TextAlign.start,
-                                    maxLines: 3,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Poppins',
-                                          color: Color(0xFF4D4C4C),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.normal,
-                                          lineHeight: 1.5,
-                                        ),
-                                  )),
+                                  child: InkWell(
+                                    onTap: () async {
+                                      context.pushNamed('edityourprofile');
+                                    },
+                                    child: SelectionArea(
+                                        child: AutoSizeText(
+                                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit massa',
+                                      textAlign: TextAlign.start,
+                                      maxLines: 3,
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: Color(0xFF4D4C4C),
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.normal,
+                                            lineHeight: 1.5,
+                                          ),
+                                    )),
+                                  ),
                                 ),
                               ],
                             ),
