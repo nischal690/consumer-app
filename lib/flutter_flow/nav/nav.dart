@@ -62,14 +62,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => HomePageWidget(),
             ),
             FFRoute(
-              name: 'setupprofile',
-              path: 'setupprofile',
-              builder: (context, params) => SetupprofileWidget(),
-            ),
-            FFRoute(
               name: 'signup',
               path: 'signup',
               builder: (context, params) => SignupWidget(),
+            ),
+            FFRoute(
+              name: 'setupprofile',
+              path: 'setupprofile',
+              builder: (context, params) => SetupprofileWidget(),
             ),
             FFRoute(
               name: 'signin',
@@ -87,6 +87,42 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ForgotPassword2Widget(
                 email: params.getParam('email', ParamType.String),
               ),
+            ),
+            FFRoute(
+              name: 'profile',
+              path: 'profile',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'profile')
+                  : ProfileWidget(),
+            ),
+            FFRoute(
+              name: 'edityourprofile',
+              path: 'edityourprofile',
+              builder: (context, params) => EdityourprofileWidget(),
+            ),
+            FFRoute(
+              name: 'setting',
+              path: 'setting',
+              builder: (context, params) => SettingWidget(),
+            ),
+            FFRoute(
+              name: 'Language',
+              path: 'language',
+              builder: (context, params) => LanguageWidget(),
+            ),
+            FFRoute(
+              name: 'camera',
+              path: 'camera',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'camera')
+                  : CameraWidget(),
+            ),
+            FFRoute(
+              name: 'home',
+              path: 'home',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'home')
+                  : HomeWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

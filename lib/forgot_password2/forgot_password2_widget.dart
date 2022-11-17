@@ -122,8 +122,8 @@ class _ForgotPassword2WidgetState extends State<ForgotPassword2Widget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.pushNamed('profile');
                       },
                       text: 'Continue',
                       options: FFButtonOptions(
